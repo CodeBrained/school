@@ -1,34 +1,39 @@
 package module2;
 import java.io.*;
+import java.util.*;
 import org.jsoup.*;
 import org.jsoup.nodes.*;
 import org.jsoup.select.Elements;
 
 public class Main {
 
+	//private static final String HashTable  = null;
+
 	public static void main(String[] args) throws Exception {
-		//getText();
 		String poemString = getText();
-
-		poemString = poemString.replaceAll("[,]", " ");
-		poemString = poemString.replaceAll("[.]", " ");
-		poemString = poemString.replaceAll("[-]", " ");
-		poemString = poemString.replaceAll("[—]", " ");
-		poemString = poemString.replaceAll("[\"]", " ");
-		poemString = poemString.replaceAll("[“]", " ");
-		poemString = poemString.replaceAll("[”]", " ");
-		poemString = poemString.replaceAll("[!]", " ");
-		poemString = poemString.replaceAll("[;]", " ");
-		poemString = poemString.replaceAll("[?]", " ");
-		poemString = poemString.replaceAll("  ", " ");
-		poemString = poemString.replaceAll("  ", " ");
-
+		poemString = uglyRegex(poemString);
 		String words[] = poemString.toLowerCase().split(" ");
+		//printText(words);
+		
+		int count = 0;
+		List<String> wordsU = new ArrayList<String>();
+		Hashtable<String, Integer> wordCount = new Hashtable<>();
 		for (int i = 0; i < words.length; i++) {
-			//words[i] = words[i].replaceAll("[^A-Za-z']", " ");
-			System.out.println(words[i]);
+			if (!wordsU.contains(words[i])) {
+				wordsU.add(words[i]);
+			}
 		}
-			
+		
+		for (int i = 0; i < wordsU.size(); i ++) {
+			//System.out.println(wordsU.size());
+			for (int j = 0; j < words.length; j++) {
+				if (words[j] == wordsU.get(i)) {
+					count++;
+				}
+			}
+		System.out.println(wordsU.get(i) + ":" + count);
+		
+		}
 	}
 	
 	public static String getText() throws Exception {
@@ -39,12 +44,10 @@ public class Main {
 		// Get the title of the poem
 		Element title = doc.getElementsByTag("h1").first();
 		String titleText = title.text();
-		//System.out.println(titleText);
 		
 		// Get the subtitle of the poem (author name)
 		Element author = doc.getElementsByTag("h2").first();
 		String authorText = author.text();
-		//System.out.println(authorText);
 		
 		// Get each paragraph from the poem
 		String poemText = new String();
@@ -57,4 +60,29 @@ public class Main {
 		String finalText = titleText + " " + authorText + " " + poemText;
 		return finalText;
 	}
+	
+	public static String uglyRegex(String text) {
+		
+		text = text.replaceAll("[,]", " ");
+		text = text.replaceAll("[.]", " ");
+		text = text.replaceAll("[-]", " ");
+		text = text.replaceAll("[—]", " ");
+		text = text.replaceAll("[\"]", " ");
+		text = text.replaceAll("[“]", " ");
+		text = text.replaceAll("[”]", " ");
+		text = text.replaceAll("[!]", " ");
+		text = text.replaceAll("[;]", " ");
+		text = text.replaceAll("[?]", " ");
+		text = text.replaceAll("[:]", " ");
+		text = text.replaceAll("  ", " ");
+		text = text.replaceAll("  ", " ");
+		return text;
+	}
+	
+	public static void printText(String[] words) {
+		for (int i = 0; i < words.length; i++) {
+			System.out.println(words[i]);
+		}
+	}
+	
 }
