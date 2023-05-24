@@ -15,52 +15,22 @@ public class Main {
 		String poemString = getText();
 		poemString = uglyRegex(poemString);
 		String words[] = poemString.toLowerCase().split(" ");
-		System.out.println("Rank : Word : Frequency");
+		System.out.println("Rank : Word         : Frequency\n--------------------------------");
 
 		// Remove elements with only the ' character
-		List<String> wordList = new ArrayList<>(Arrays.asList(words));
-		wordList.remove("’");
+		List<String> wordList = removeApo(words);
 
-		// create unique list
-		List<String> wordsU = new ArrayList<String>();
-		for (int i = 0; i < wordList.size(); i++) {
-			if (!wordsU.contains(wordList.get(i))) {
-				wordsU.add(wordList.get(i));
-			}
-		}
+		// Create unique list
+		List<String> wordsU = uniqueList(wordList);
 
-		// count the frequency of each word
-		int count = 0;
-		Hashtable<String, Integer> wordMap = new Hashtable<>();
-		for (int i = 0; i < wordsU.size(); i++) {
-			for (int j = 0; j < wordList.size(); j++) {
-				if (wordsU.get(i).equals(wordList.get(j))) {
-					count++;
-				}
-			}
-			wordMap.put(wordsU.get(i), count);
-			count = 0;
-		}
+		// Count the frequency of each word
+		Hashtable<String, Integer> wordMap = countWordFreq(wordsU, wordList);
+		
+		// Sort the data		
+		List<Map.Entry<String, Integer>> list = sortList(wordMap);
 
-		List<Map.Entry<String, Integer>> list = new ArrayList<Entry<String, Integer>>(wordMap.entrySet());
-
-		Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
-			public int compare(Entry<String, Integer> entry1, Entry<String, Integer> entry2) {
-				return entry2.getValue().compareTo(entry1.getValue()); // swapped 1 and 2
-			}
-		});
-
-		Map<String, Integer> mapSortedByValues = new LinkedHashMap<String, Integer>();
-
-		count = 1;
-		for (Map.Entry<String, Integer> entry : list) {
-			mapSortedByValues.put(entry.getKey(), entry.getValue());
-			if (count < 21) {
-				System.out.println(String.format("%02d", count) + " : " + String.format("%10s", entry.getKey()) + " : "
-						+ entry.getValue());
-			}
-			count++;
-		}
+		//format and print top 20 words
+		formatList(list);
 	}
 
 	public static String getText() throws Exception {
@@ -87,7 +57,8 @@ public class Main {
 		String finalText = titleText + " " + authorText + " " + poemText;
 		return finalText;
 	}
-
+	
+	// Removes unwanted characters
 	public static String uglyRegex(String text) {
 
 		text = text.replaceAll("[,]", " ");
@@ -105,10 +76,67 @@ public class Main {
 		text = text.replaceAll("  ", " ");
 		return text;
 	}
-
-	public static void printText(String[] words) {
-		for (int i = 0; i < words.length; i++) {
-			System.out.println(words[i]);
+	
+	/* Removes Apostrophe from list of unique words.
+	   I added this separate because words like "demon's" were becoming "demon s" */
+	public static List<String> removeApo(String[] words) {
+		List<String> wordList = new ArrayList<>(Arrays.asList(words));
+		wordList.remove("’");
+		return wordList;
+	}
+	
+	// Creates the list of unique words
+	public static List<String> uniqueList(List<String> wordList) {
+		List<String> wordsU = new ArrayList<String>();
+		for (int i = 0; i < wordList.size(); i++) {
+			if (!wordsU.contains(wordList.get(i))) {
+				wordsU.add(wordList.get(i));
+			}
+		}
+		return wordsU;
+	}
+	
+	/* This method counts the frequency of each word by comparing the list of unique words against the list of all the words in The Raven.
+	   In the future I want to re write this to use something other than Hashtable. */
+	public static Hashtable<String, Integer> countWordFreq(List<String> wordsU, List<String> wordList) {
+		int count = 0;
+		Hashtable<String, Integer> wordMap = new Hashtable<>();
+		for (int i = 0; i < wordsU.size(); i++) {
+			for (int j = 0; j < wordList.size(); j++) {
+				if (wordsU.get(i).equals(wordList.get(j))) {
+					count++;
+				}
+			}
+			wordMap.put(wordsU.get(i), count);
+			count = 0;
+		}
+		return wordMap;
+	}
+	
+	/* This method allows the list to be sorted using collections built in sort method.
+	   I found this method at https://www.javacodeexamples.com/sort-hashtable-by-values-in-java-example/3169 */
+	public static List<Map.Entry<String, Integer>> sortList(Hashtable<String, Integer> wordMap) {
+		List<Map.Entry<String, Integer>> list = new ArrayList<Entry<String, Integer>>(wordMap.entrySet());
+		Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
+			public int compare(Entry<String, Integer> entry1, Entry<String, Integer> entry2) {
+				return entry2.getValue().compareTo(entry1.getValue()); // swapped entry1 and entry2
+			}
+		});
+		return list;
+	}
+	
+	// This list formats the data and prints it to the user. 
+	public static void formatList(List<Map.Entry<String, Integer>> list) {
+		Map<String, Integer> mapSortedByValues = new LinkedHashMap<String, Integer>();
+		int count = 1;
+		for (Map.Entry<String, Integer> entry : list) {
+			mapSortedByValues.put(entry.getKey(), entry.getValue());
+			if (count < 21) {
+				System.out.println(String.format("%02d", count) + "   : " + String.format("%-12s", entry.getKey()) + " : "
+						+ entry.getValue());
+			}
+			count++;
 		}
 	}
 }
+
