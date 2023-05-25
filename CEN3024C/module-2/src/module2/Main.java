@@ -20,16 +20,16 @@ public class Main {
 		// Remove elements with only the ' character
 		List<String> wordList = removeApo(words);
 
-		// Create unique list
+		// Create a unique word list
 		List<String> wordsU = uniqueList(wordList);
 
 		// Count the frequency of each word
 		Hashtable<String, Integer> wordMap = countWordFreq(wordsU, wordList);
 		
-		// Sort the data		
+		// Sort the data	
 		List<Map.Entry<String, Integer>> list = sortList(wordMap);
 
-		//format and print top 20 words
+		// Format and print top 20 words
 		formatList(list);
 	}
 

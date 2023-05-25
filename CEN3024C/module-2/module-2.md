@@ -15,8 +15,8 @@ May 2023
 
 ### 1. Get the text from the HTML file and split into an array of words
 
-* First I file type object `input` to hold the data contained in the .txt file for The Raven.
-* After created `input` I created a Document type object named `doc` that uses the JSoup method `parse()` to read the file and encode it to UTF-8.
+* First I created a file type object `input` to hold the data contained in the .txt file for The Raven.
+* After I created `input` I created a Document type object named `doc` that uses the JSoup method `parse()` to read the file and encode it to UTF-8.
 * A String `poemText` is created to hold the .txt file as a String type object. 
 * `uglyRegex` is called to filter out unwanted characters from the String.
 * The String is then split into an Array named `words` on the whitespace character .
