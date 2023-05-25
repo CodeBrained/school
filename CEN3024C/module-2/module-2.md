@@ -10,6 +10,7 @@ May 2023
 - [x] 4. Count the frequency of each word
 - [x] 5. Sort the data
 - [x] 6. Format and print top 20 words
+- [x] 7. JSoup
 
 ## Steps In-Depth
 
@@ -50,7 +51,12 @@ May 2023
 ### 6. Format and print top 20 words
 
 * `formatList` is created to format the list in an organized view for the user. 
-* The `list` is passed through `formatList` to be printed to the console in order of 1-20.
+* The `list` is passed through `formatList` to be printed to the 
+console in order of 1-20.
+
+### 7. JSoup
+
+* In order for this to work the user must download JSoup and put it in the classpath.
 
 # References
 
