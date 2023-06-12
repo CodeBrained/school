@@ -4,10 +4,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		FibRecursive recursive = new FibRecursive();
-		recursive.start();
+		recursive.run();
 		
 		FibIterative iterative = new FibIterative();
-		iterative.start();
+		iterative.run();
 
 	}
 	

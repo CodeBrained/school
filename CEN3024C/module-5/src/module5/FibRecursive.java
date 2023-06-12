@@ -1,6 +1,6 @@
 package module5;
 
-public class FibRecursive extends Thread {
+public class FibRecursive {
 	public static int fibonacci(int n) {
 		if (n == 0) {
 			return 0;
@@ -13,18 +13,11 @@ public class FibRecursive extends Thread {
 	
 	public void run() {		
 		System.out.println("Recursion");
-		for (int i = 0; i <= 15; i++) {
-			long time = System.nanoTime();
+		for (int i = 0; i <= 20; i++) {
+			long startTime = System.nanoTime();
 			int answer = fibonacci(i);
-			time = System.nanoTime() - time;
+			long time = System.nanoTime() - startTime;
 			System.out.println("n:" + answer + " in " + time + " ns");
 		}
 	}
-	
-/*	public void run() {
-		long time = System.nanoTime();
-		int answer = fibonacci(10);
-		time = System.nanoTime() - time;
-		System.out.println("Recursion: " + answer + " in " + time + " ns");
-	} */
 }
