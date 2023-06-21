@@ -10,30 +10,41 @@ import javafx.scene.control.Button;
 
 
 
-public class Main extends Application {
+public class Main extends Application implements EventHandler<ActionEvent> {
 	
 	Button button;
+	Stage window;
+	
+	public static void main(String[] args) {
+		launch(args);
+	}
 	
 	@Override
-	public void start(Stage primaryStage) {
+	public void start(Stage window) {
 		try {
-			primaryStage.setTitle("Word Parser");
+			window.setTitle("Word Parser");
 			button = new Button();
-			button.setText("Click me");
+			button.setText("top 20");
+			
+			button.setOnAction(this);
 			
 			StackPane sp = new StackPane();
 			sp.getChildren().add(button);
 			
-			Scene scene = new Scene(sp, 300, 250);
-			primaryStage.setScene(scene);
-			primaryStage.show();
+			Scene scene1, scene2, scene3;
+			scene1 = new Scene(sp, 300, 250);
+			
+			window.setScene(scene1);
+			window.show();
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
-	public static void main(String[] args) {
-		launch(args);
+	public void handle(ActionEvent event) {
+		if(event.getSource()==button) {
+															//FIXME
+		}
 	}
 }
 
