@@ -1,6 +1,9 @@
 package application;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.PrintStream;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -22,7 +25,7 @@ public class WordParser {
 		String poemString = getText();
 		poemString = uglyRegex(poemString);
 		String words[] = poemString.toLowerCase().split(" ");
-		System.out.println("Rank : Word         : Frequency\n--------------------------------");
+		
 
 		// Remove elements with only the ' character
 		List<String> wordList = removeApo(words);
@@ -40,7 +43,7 @@ public class WordParser {
 		formatList(list);
 	}
 
-	public static String getText() throws Exception {
+	public String getText() throws Exception {
 		// Parse the HTML text into a Document object
 		File input = new File("TheRavenPoemWithHTMLTags.txt");
 		Document doc = Jsoup.parse(input, "UTF-8");
@@ -133,16 +136,24 @@ public class WordParser {
 	}
 	
 	// This list formats the data and prints it to the user. 
-	public static void formatList(List<Map.Entry<String, Integer>> list) {
+	public static void formatList(List<Map.Entry<String, Integer>> list) throws FileNotFoundException {
 		Map<String, Integer> mapSortedByValues = new LinkedHashMap<String, Integer>();
 		int count = 1;
+		PrintStream out = new PrintStream(new FileOutputStream("temp.txt"));
+		System.setOut(out);
+		System.out.println("Rank : Word         : Frequency\n--------------------------------");
 		for (Map.Entry<String, Integer> entry : list) {
 			mapSortedByValues.put(entry.getKey(), entry.getValue());
 			if (count < 21) {
+				
 				System.out.println(String.format("%02d", count) + "   : " + String.format("%-12s", entry.getKey()) + " : "
 						+ entry.getValue());
+				
 			}
 			count++;
 		}
+		out.close();
 	}
+	
+	
 }
