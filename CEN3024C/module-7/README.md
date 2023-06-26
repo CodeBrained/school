@@ -6,6 +6,7 @@ June 2023
 
 
 ## Deliverables
+- [x] Unit testing for at least 2 methods.
 - [] One page explanation explaining the design of the unit tests.
 - [] .java files for the application.
 - [] Screenshots of the unit test results.
