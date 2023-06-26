@@ -12,5 +12,5 @@ June 2023
 - [] Provide GitHub link.
 
 ## Methods Tested
-* 'formatList()'
-* 'getText()'
+* `formatList()`
+* `getText()`
