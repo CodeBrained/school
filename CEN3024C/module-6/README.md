@@ -1,4 +1,4 @@
-# Module 6 UI Design
+# Module 6: UI Design
 June 2023
 
 ## Objectives
