@@ -10,6 +10,7 @@ June 2023
 ## Steps: Outline
 - [x] 1. Create a method to implement a recursive Fibonacci function.
 - [x] 2. Create a method to implement an iterative Fibonacci funtion.
+- [] 3.
 
 ## References
 * [Fibonacci functions](https://dev.to/khalilsaboor/fibonacci-recursion-vs-iteration--474l)
