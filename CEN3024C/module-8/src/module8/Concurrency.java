@@ -10,8 +10,11 @@ package module8;
 public class Concurrency {
 
 	public static void main(String[] args) {
-		
+		//This statement returns a random array of the chosen size.
+		int[] arr = RandomNumArray.randomNumArray(5);
 
+		//This statement returns the sum of the random array's contents.
+		ArraySum.arraySum(arr);
 	}
 
 }
