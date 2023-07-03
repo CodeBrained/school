@@ -15,7 +15,6 @@ public class RandomNumArray {
 		int[] arr = new int[n];
 		for (int i = 0; i < arr.length; i++) {
 			arr[i] = getRandomValue(min, max);
-			System.out.println(arr[i]);
 		}
 		return arr;
 	}

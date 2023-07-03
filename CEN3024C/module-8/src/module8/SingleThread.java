@@ -1,6 +1,6 @@
 package module8;
 
-public class ArraySum {
+public class SingleThread {
 	public static void arraySum(int[] arr) {
 		int sum = 0;
 		for (int i = 0; i < arr.length; i++) {
