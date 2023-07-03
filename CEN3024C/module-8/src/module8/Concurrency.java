@@ -9,7 +9,7 @@ package module8;
 
 public class Concurrency {
 	private static int sum = 0;
-	public static int sumSingleThread = 0;
+	private static int sumSingleThread = 0;
 	
 	public static synchronized void sum(int n) {
 		sum += n;
@@ -73,7 +73,7 @@ public class Concurrency {
 		// Creates a variable to store the total time of the multithreaded process
 		long endMultiThread = System.currentTimeMillis() - startMultiThread;
 		
-		System.out.println("Multithread sum: " + sum + "\n" + "Multithread time: " + endMultiThread + "ms");
+		System.out.println("Multithread sum:   " + sum + "\n" + "Multithread time:  " + endMultiThread + "ms");
 		
 		// Creates a variable to store the starting time of the single threaded process
 		long startSingleThread = System.currentTimeMillis();
@@ -88,7 +88,7 @@ public class Concurrency {
 		}
 		long endSingleThread = System.currentTimeMillis() - startSingleThread;
 		
-		System.out.println("Single thread sum: " + sumSingleThread + "\n" + "Single thread time: " + endSingleThread + "ms");
+		System.out.println("\nSingle thread sum: " + sumSingleThread + "\n" + "Single thread time: " + endSingleThread + "ms");
 		
 	}
 	
