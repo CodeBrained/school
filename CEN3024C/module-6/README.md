@@ -30,3 +30,17 @@ June 2023
 * [TextArea with ScrollPane info alt.](https://stackoverflow.com/questions/19177319/adding-scrollpane-on-textarea)
 * [Output to txt file](https://stackoverflow.com/questions/1994255/how-to-write-console-output-to-a-txt-file);
 * [Displaying .txt file in TextArea](https://stackoverflow.com/questions/43159780/writing-into-a-text-file-then-reading-it-back-into-a-textarea-javafx)
+
+## Resources
+
+### Reading
+
+* [JavaFX Tutorial](https://www.tutorialspoint.com/javafx/index.htm)
+* [Java Platform, Standard Edition (Java SE) 8](https://docs.oracle.com/javase/8/javase-clienttechnologies.htm)
+
+### Videos
+
+* [Setting Up Java FX 13 with Eclipse](https://www.youtube.com/watch?v=oVn6_2KuYbM&feature=youtu.be)
+* [Setup IntelliJ IDEA (2021) for JavaFX & SceneBuilder and Create Your First JavaFX Application](https://www.youtube.com/watch?v=ZfaPMLdgJxQ&feature=youtu.be)
+* [JavaFX Java GUI Tutorial - 1 - Creating a Basic Window](https://www.youtube.com/watch?v=FLkOX4Eez6o&list=PL6gx4Cwl9DGBzfXLWLSYVy8EbTdpGbUIG&index=1)
+* [JavaFx Tutorial For Beginners 1 - Introduction To JavaFx](https://www.youtube.com/watch?v=9YrmON6nlEw&list=PLS1QulWo1RIaUGP446_pWLgTZPiFizEMq)
