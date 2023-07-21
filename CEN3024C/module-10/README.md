@@ -5,7 +5,7 @@ July 2023
 ## Objectives
 
 * Add database support to your word occurrences application.
-* Add a schema called “word occurrences”. Add a table called “word”. Then, as you parse the document, add new words that are not already in the database.
+* Add a schema called 'word occurrences'. Add a table called 'word'. Then, as you parse the document, add new words that are not already in the database.
 * EX. insert into wordOccurrences.word (word) values ('the');
 * EX. insert into wordOccurrences..word (word) values ('test');
 * EX. insert into wordOccurrences..word (word) values ('this');
