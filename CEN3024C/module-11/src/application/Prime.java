@@ -8,20 +8,18 @@ package application;
 
 public class Prime {
 	
-	public static String checkPrime(int num) {
+	public static int checkPrime(int num) {
 		int i = 2;
-		String text = new String();
+		int endNum;
 		
 		boolean isPrime = isPrime(num,i);
 		if (!isPrime) {
-			//System.out.println(num + " is not a prime number");
-			text = (" is not a prime number");
+			endNum = 1;
 		}
 		else {
-			//System.out.println(num + " is a prime number");
-			text = (" is a prime number");
+			endNum = 2;
 		}
-		return text;
+		return endNum;
 	}
 
 	
