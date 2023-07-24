@@ -4,19 +4,24 @@ package application;
 // prime algorithm
 //
 
-import java.util.Scanner;
+
 
 public class Prime {
 	
-	public static void checkPrime(int num) {
+	public static String checkPrime(int num) {
 		int i = 2;
+		String text = new String();
+		
 		boolean isPrime = isPrime(num,i);
 		if (!isPrime) {
-			System.out.println(num + " is not a prime number");
+			//System.out.println(num + " is not a prime number");
+			text = (" is not a prime number");
 		}
 		else {
-			System.out.println(num + " is a prime number");
+			//System.out.println(num + " is a prime number");
+			text = (" is a prime number");
 		}
+		return text;
 	}
 
 	

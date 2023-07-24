@@ -1,25 +1,18 @@
 package application;
 
-
-
 import javafx.application.Application;
+
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
+
 import javafx.stage.Stage;
+
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Button;
-import javafx.scene.control.ScrollPane;
-import javafx.scene.control.TextArea;
 import javafx.scene.control.Label;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import javafx.scene.control.TextField;
-
-import java.io.File;
-import java.io.InputStream;
-
-import java.util.Scanner;
 
 public class Main extends Application implements EventHandler<ActionEvent> {
 	
@@ -28,6 +21,7 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 	Button btn1;
 	Label title, prompt;
 	TextField textField;
+	Text response, response2;
 
 	public static void main(String[] args) {
 		launch(args);
@@ -51,16 +45,27 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 			btn1.setText("Enter");
 			btn1.setLayoutX(180);
 			btn1.setLayoutY(100);
+			btn1.setOnAction(this);
 			
 			textField = new TextField();
 			textField.setLayoutX(10);
 			textField.setLayoutY(100);
+			
+			response = new Text();
+			response.setLayoutX(10);
+			response.setLayoutY(150);
+			
+			response2 = new Text();
+			response2.setLayoutX(10);
+			response2.setLayoutY(170);
 			
 			Pane p = new Pane();
 			p.getChildren().add(title);
 			p.getChildren().add(prompt);
 			p.getChildren().add(btn1);
 			p.getChildren().add(textField);
+			p.getChildren().add(response);
+			p.getChildren().add(response2);
 
 
 			
@@ -78,7 +83,13 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 	@Override
 	public void handle(ActionEvent event) {
 		if(event.getSource()==btn1) {
+			String string = new String();
 			
+			int num = Integer.parseInt(textField.getText());
+			response.setText("User entered: " + num);
+			
+			string = Prime.checkPrime(num);
+			response2.setText(num + string);
 		}
 		
 	}
