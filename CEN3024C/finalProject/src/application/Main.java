@@ -15,6 +15,7 @@ import javafx.scene.text.Text;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.util.Scanner;
 
 
@@ -27,8 +28,9 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 	Label label, title;
 	
 	public static void main(String[] args) throws Exception {
-		getConnection();
 		launch(args);
+		getConnection();
+		post();
 	}
 	
 	@Override
@@ -158,5 +160,19 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 		
 		
 		return null;
+	}
+	
+	public static void post() throws Exception {
+		final String var1 = "Johi";
+		final String var2 = "909";
+		try {
+			Connection con = getConnection();
+			PreparedStatement posted = con.prepareStatement(
+					"INSERT INTO word (word, frequency) VALUES ( '"+var1+"', "+var2+")");
+			posted.executeUpdate();
+		} catch (Exception e) {System.out.println(e); }
+		finally {
+			System.out.println("Insert Completed");
+		}
 	}
 }

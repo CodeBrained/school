@@ -26,3 +26,15 @@ To create the UI I used `JavaFX`. I created a simple UI that can allow the user 
 ### Databases
 
 ### Deployment
+
+## References
+
+### Reading
+* [How to Select Database in MySQL Workbench?](https://www.foxinfotech.org/2019/03/how-to-select-database-in-mysql-workbench.html)
+
+* [Run/Execute a Query in MySQL Workbench](https://www.foxinfotech.org/how-to-run-query-in-mysql-workbench)
+
+#### Stack Overflow
+* [unknown database in jdbc](https://stackoverflow.com/questions/15832044/unknown-database-in-jdbc)
+
+### Videos
