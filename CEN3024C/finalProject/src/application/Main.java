@@ -13,10 +13,12 @@ import javafx.scene.control.Label;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import java.io.File;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.Scanner;
+
 
 
 public class Main extends Application implements EventHandler<ActionEvent> {
@@ -26,11 +28,12 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 	Stage window;
 	TextArea top20;
 	Label label, title;
+	String[] list = new String[20];
 	
 	public static void main(String[] args) throws Exception {
 		launch(args);
 		getConnection();
-		post();
+		
 	}
 	
 	@Override
@@ -133,15 +136,23 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 			WordParser wp = new WordParser();
 			try {
 				wp.wordParser();
-				Scanner s = new Scanner(new File("temp.txt"));
-				while (s.hasNext()) {
-					top20.appendText(s.nextLine() + "\n");
+				Scanner scan = new Scanner(new File("temp.txt"));
+				String string = new String();
+				
+				while (scan.hasNext()) {
+					string = scan.nextLine();
+					top20.appendText(string + "\n");
 				}
-				s.close();
+				scan.close();
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
-			
+			  try {
+				post();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
 	}
 	
@@ -163,16 +174,24 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 	}
 	
 	public static void post() throws Exception {
+		
 		final String var1 = "Johi";
-		final String var2 = "909";
+		final String var2 = "909";		
+		
 		try {
 			Connection con = getConnection();
-			PreparedStatement posted = con.prepareStatement(
-					"INSERT INTO word (word, frequency) VALUES ( '"+var1+"', "+var2+")");
-			posted.executeUpdate();
+			
+			PreparedStatement posted;
+			for (int i = 1; i < 20; i++) {
+				posted = con.prepareStatement(
+						"INSERT INTO word (word, frequency) VALUES ('"+var1+"', "+var2+")");
+				
+				posted.executeUpdate();
+			}
 		} catch (Exception e) {System.out.println(e); }
 		finally {
 			System.out.println("Insert Completed");
 		}
 	}
+	
 }

@@ -34,7 +34,10 @@ To create the UI I used `JavaFX`. I created a simple UI that can allow the user 
 
 * [Run/Execute a Query in MySQL Workbench](https://www.foxinfotech.org/how-to-run-query-in-mysql-workbench)
 
+* [MySQL - Tutorial](https://www.vogella.com/tutorials/MySQL/article.html)
+
 #### Stack Overflow
 * [unknown database in jdbc](https://stackoverflow.com/questions/15832044/unknown-database-in-jdbc)
+* [Reading and displaying data from a .txt file](https://stackoverflow.com/questions/731365/reading-and-displaying-data-from-a-txt-file)
 
 ### Videos

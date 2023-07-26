@@ -14,12 +14,19 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 
+
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 public class WordParser {
+	/**
+	 * 
+	 * This method initializes a list of the top 20 words in the Raven poem.
+	 * This method does not return anything or use parameters.
+	 * @throws Exception
+	 */
 	public void wordParser() throws Exception {
 		// Get the text from the HTML file and split into an array of words
 		String poemString = getText();
@@ -43,6 +50,11 @@ public class WordParser {
 		formatList(list);
 	}
 
+	/**
+	 * This method gets the text from the poem using a built in jsoup parser.
+	 * @return
+	 * @throws Exception
+	 */
 	public String getText() throws Exception {
 		// Parse the HTML text into a Document object
 		File input = new File("TheRavenPoemWithHTMLTags.txt");
@@ -68,7 +80,15 @@ public class WordParser {
 		return finalText;
 	}
 	
-	// Removes unwanted characters
+	/**
+	 * 
+	 * The reason I used this long regex was because all other single line variations were deleting
+	 * characters that should not have been deleted. Some characters in the poem were showing up as
+	 * something different in eclipse. I created this to manually have more control
+	 * over what I was removing form the poem.
+	 * @param text This takes in the poem as a String and removes unwanted characters.
+	 * @return
+	 */
 	public static String uglyRegex(String text) {
 
 		text = text.replaceAll("[,]", " ");
@@ -87,15 +107,24 @@ public class WordParser {
 		return text;
 	}
 	
-	/* Removes Apostrophe from list of unique words.
-	   I added this separate because words like "demon's" were becoming "demon s" */
+	/**
+	 * Removes Apostrophe from list of unique words.I added this separate because
+	 *  words like "demon's" were becoming "demon s".
+	 * @param words takes in the poem after going through the `uglyRegex` method.
+	 * @return the list without apostrophes.
+	 */
 	public static List<String> removeApo(String[] words) {
 		List<String> wordList = new ArrayList<>(Arrays.asList(words));
 		wordList.remove("’");
 		return wordList;
 	}
 	
-	// Creates the list of unique words
+	/**
+	 * 
+	 * Creates a list of unique words
+	 * @param wordList the list after its gone through an extensive regex formula.
+	 * @return a list of unique words.
+	 */
 	public static List<String> uniqueList(List<String> wordList) {
 		List<String> wordsU = new ArrayList<String>();
 		for (int i = 0; i < wordList.size(); i++) {
@@ -106,8 +135,14 @@ public class WordParser {
 		return wordsU;
 	}
 	
-	/* This method counts the frequency of each word by comparing the list of unique words against the list of all the words in The Raven.
-	   In the future I want to re write this to use something other than Hashtable. */
+	/**
+	 * 
+	 * This method counts the frequency of each word by comparing the list of unique words against the list of all the words in The Raven.
+	   In the future I want to re write this to use something other than Hashtable.
+	 * @param wordsU word
+	 * @param wordList
+	 * @return a map that has the unique words and their frequencies. 
+	 */
 	public static Hashtable<String, Integer> countWordFreq(List<String> wordsU, List<String> wordList) {
 		int count = 0;
 		Hashtable<String, Integer> wordMap = new Hashtable<>();
@@ -123,8 +158,12 @@ public class WordParser {
 		return wordMap;
 	}
 	
-	/* This method allows the list to be sorted using collections built in sort method.
-	   I found this method at https://www.javacodeexamples.com/sort-hashtable-by-values-in-java-example/3169 */
+	/**
+	 * This method allows the list to be sorted using collections built in sort method.
+	   I found this method at https://www.javacodeexamples.com/sort-hashtable-by-values-in-java-example/3169
+	 * @param wordMap takes in the wordMap of unique words and their frequency.
+	 * @return returns a list of the wordMap in order of frequency.
+	 */
 	public static List<Map.Entry<String, Integer>> sortList(Hashtable<String, Integer> wordMap) {
 		List<Map.Entry<String, Integer>> list = new ArrayList<Entry<String, Integer>>(wordMap.entrySet());
 		Collections.sort(list, new Comparator<Map.Entry<String, Integer>>() {
@@ -135,7 +174,13 @@ public class WordParser {
 		return list;
 	}
 	
-	// This list formats the data and prints it to the user. 
+	/**
+	 * 
+	 * This method takes the sorted list and prints it to the user in a 
+	 * visually pleasing manner.
+	 * @param list takes in the sorted list of unique words and their frequency.
+	 * @throws FileNotFoundException if there is no list an exception will be thrown.
+	 */
 	public static void formatList(List<Map.Entry<String, Integer>> list) throws FileNotFoundException {
 		Map<String, Integer> mapSortedByValues = new LinkedHashMap<String, Integer>();
 		int count = 1;
@@ -147,13 +192,12 @@ public class WordParser {
 			if (count < 21) {
 				
 				System.out.println(String.format("%02d", count) + "   : " + String.format("%-12s", entry.getKey()) + " : "
-						+ entry.getValue());
+						+ entry.getValue()); 
 				
 			}
 			count++;
 		}
 		out.close();
 	}
-	
 	
 }
