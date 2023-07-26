@@ -49,6 +49,10 @@ public class Server extends Application {
 				ex.printStackTrace();
 			}
 		}).start();
+		Client client = new Client();
+		Stage clientStage = new Stage();
+		clientStage.initOwner(primaryStage);
+		client.start(clientStage);
 	}
 
 	/**
