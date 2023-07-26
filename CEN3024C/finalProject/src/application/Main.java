@@ -13,6 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Text;
 import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.util.Scanner;
 
 
@@ -24,7 +26,8 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 	TextArea top20;
 	Label label, title;
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
+		getConnection();
 		launch(args);
 	}
 	
@@ -138,5 +141,22 @@ public class Main extends Application implements EventHandler<ActionEvent> {
 			}
 			
 		}
+	}
+	
+	public static Connection getConnection() throws Exception{
+		try {
+			String driver = "com.mysql.cj.jdbc.Driver";
+			String url = "jdbc:mysql://localhost:3306/words";
+			String username = "Cristian";
+			String password = "password";
+			Class.forName(driver);
+			
+			Connection conn = DriverManager.getConnection(url,username,password);
+			System.out.println("Connected");
+			return conn;
+		} catch(Exception e) {System.out.println(e);}
+		
+		
+		return null;
 	}
 }

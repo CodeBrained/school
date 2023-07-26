@@ -16,6 +16,11 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Program Files/MySQL/mysql-connector-j-8.1.0/mysql-connector-j-8.1.0.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/Cristian/Downloads/jsoup-1.16.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
