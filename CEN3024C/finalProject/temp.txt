@@ -1,0 +1,22 @@
+Rank : Word         : Frequency
+--------------------------------
+01   : the          : 57
+02   : and          : 38
+03   : i            : 32
+04   : my           : 24
+05   : of           : 22
+06   : that         : 18
+07   : this         : 16
+08   : a            : 15
+09   : door         : 14
+10   : chamber      : 11
+11   : raven        : 11
+12   : is           : 11
+13   : nevermore    : 11
+14   : bird         : 10
+15   : on           : 10
+16   : me           : 9
+17   : or           : 8
+18   : more         : 8
+19   : with         : 8
+20   : lenore       : 8
