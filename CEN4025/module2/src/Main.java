@@ -15,9 +15,6 @@ public class Main {
         Methods.continueMessage();
         Scanner scan = new Scanner(System.in);
         ArrayList<String> items = new ArrayList<String>();
-        items.add("Hello"); // FIXME delete
-        items.add("World"); // FIXME delete
-        items.add("Test"); // FIXME delete
 
         int userChoice = 0;
         while (userChoice != -1) {
@@ -26,7 +23,8 @@ public class Main {
                 case 1:
                     System.out.println("\nWrite your to-do note.");
                     String toDoNote = scan.nextLine();
-                    // FIXME create a way to add notes to ArrayList 'items'
+
+                    items.add(toDoNote);
                     System.out.println("\nYour note has been added.");
                     Methods.continueMessage();
                     break;
@@ -35,7 +33,7 @@ public class Main {
                     System.out.print("If you don't know the index, enter -1 to cancel, and ");
                     System.out.println("then enter 3 to view the to-do list.");
                     int num = Integer.parseInt(scan.nextLine());
-                    // FIXME create a way to delete item from ArrayList 'items'
+                    items.remove(num);
                     System.out.println("\nYour note has been deleted.");
                     Methods.continueMessage();
                     break;
