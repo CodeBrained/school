@@ -15,9 +15,9 @@ public class Main {
         Methods.continueMessage();
         Scanner scan = new Scanner(System.in);
         ArrayList<String> items = new ArrayList<String>();
-        items.add("Hello");
-        items.add("World");
-        items.add("Test");
+        items.add("Hello"); // FIXME delete
+        items.add("World"); // FIXME delete
+        items.add("Test"); // FIXME delete
 
         int userChoice = 0;
         while (userChoice != -1) {
@@ -31,22 +31,23 @@ public class Main {
                     Methods.continueMessage();
                     break;
                 case 2:
-                    System.out.println("Enter the index of the item you wish to delete ");
+                    System.out.println("\nEnter the index of the item you wish to delete ");
                     System.out.print("If you don't know the index, enter -1 to cancel, and ");
-                    System.out.print("then enter 3 to view the to-do list.");
+                    System.out.println("then enter 3 to view the to-do list.");
                     int num = Integer.parseInt(scan.nextLine());
                     // FIXME create a way to delete item from ArrayList 'items'
                     System.out.println("\nYour note has been deleted.");
+                    Methods.continueMessage();
                     break;
                 case 3:
-                    System.out.println("view list");
+                    System.out.println("\nTo-Do List");
                     for (int i = 0; i < items.size(); i++) {
                         System.out.println(i + " " + items.get(i));
                     }
                     Methods.continueMessage();
                     break;
                 default:
-                    System.out.println("Out of range");
+                    System.out.println("Closing program.");
             }
         }
         scan.close();
