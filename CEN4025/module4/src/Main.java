@@ -21,11 +21,14 @@ public class Main {
         for (int i = 0; i < n; i++) {
             randomArrayList.add(random.nextInt(10));
         }
-        System.out.println(randomArrayList.size());
+        System.out.println("ArrayList Size: " + randomArrayList.size());
 
         // Clearing out the ArrayList
-        randomArrayList.clear();
-        System.out.println(randomArrayList.size());
+        //randomArrayList.clear();
+        for (int i = (n-1);  i > -1; i--) {
+            randomArrayList.remove(i);
+        }
+        System.out.println("ArrayList Size: " + randomArrayList.size());
     }
 
     public static void linkedListMethod(int n) {
@@ -37,11 +40,14 @@ public class Main {
         for (int i = 0; i < n; i++) {
             randomLinkedList.add(random.nextInt(10));
         }
-        System.out.println(randomLinkedList.size());
+        System.out.println("LinkedList Size: " + randomLinkedList.size());
 
         // Clearing out the LinkedList
-        randomLinkedList.clear();
-        System.out.println(randomLinkedList.size());
+        //randomLinkedList.clear();
+        for (int i = (n-1); i > -1; i--) {
+            randomLinkedList.pop();
+        }
+        System.out.println("LinkedList Size: " + randomLinkedList.size());
 
     }
 
@@ -53,10 +59,13 @@ public class Main {
         for (int i = 0; i < n; i++) {
             randomHashTable.put(i, random.nextInt(10));
         }
-        System.out.println(randomHashTable.size());
+        System.out.println("Hashtable Size: " + randomHashTable.size());
 
         // Clearing out Hashtable
-        randomHashTable.clear();
-        System.out.println(randomHashTable.size());
+        //randomHashTable.clear();
+        for (int i = (n-1); i > -1; i--) {
+            randomHashTable.remove(i);
+        }
+        System.out.println("Hashtable Size: " + randomHashTable.size());
     }
 }
