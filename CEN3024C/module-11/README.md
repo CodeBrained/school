@@ -13,6 +13,10 @@ July 2023
 
 * [Java Program to Check Whether a Number is Prime or Not](https://www.programiz.com/java-programming/examples/prime-number)
 
+* [InputStream](https://www.programiz.com/java-programming/inputstream)
+
+* [Launching Client From Server](https://stackoverflow.com/questions/70222035/how-do-i-launch-the-client-class-from-the-servermain-class)
+
 ## Resources
 
 ### Reading
