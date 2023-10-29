@@ -18,8 +18,9 @@ public class Main {
             Scanner scan = new Scanner(System.in);
             ArrayList<String> items = new ArrayList<String>();
 
-            ToDoListEntity toDo = new ToDoListEntity();
+            //ToDoListEntity toDo = new ToDoListEntity();
             TypedQuery<ToDoListEntity> viewToDo = entityManager.createNamedQuery("ToDoListEntity.viewList", ToDoListEntity.class);
+
 
             int userChoice = 0;
             while (userChoice != -1) {
@@ -27,6 +28,7 @@ public class Main {
                 switch (userChoice) {
                     case 1:
                         transaction.begin();
+                        ToDoListEntity toDo = new ToDoListEntity();
 
                         // User enters their to-do note
                         System.out.println("\nWrite your to-do note.");
@@ -44,6 +46,7 @@ public class Main {
                         break;
                     case 2: //FIXME
                         transaction.begin();
+                        ToDoListEntity toDo2 = new ToDoListEntity();
 
                         // Introduction messages
                         System.out.println("\nEnter the index of the item you wish to delete ");
@@ -54,7 +57,7 @@ public class Main {
                         int num = Integer.parseInt(scan.nextLine());
 
                         // Creates new EM to manage deletion of to-do list items
-                        ToDoListEntity toDo2 = entityManager.find(ToDoListEntity.class, num);
+                        toDo2 = entityManager.find(ToDoListEntity.class, num);
 
                         // Removes items from the DB
                         entityManager.persist(toDo2);
