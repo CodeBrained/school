@@ -62,7 +62,4 @@ public class ToDoListEntity {
                 ", task='" + task + '\'' +
                 '}';
     }
-
-
-
 }

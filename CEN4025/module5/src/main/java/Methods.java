@@ -12,6 +12,4 @@ public class Methods {
         System.out.println("Enter '3' to view your to-do item list.");
         System.out.println("Enter '-1' to quit.");
     }
-
-
 }
