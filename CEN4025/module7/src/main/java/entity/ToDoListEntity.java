@@ -1,13 +1,9 @@
 package entity;
 
-import com.mysql.cj.Session;
 import jakarta.persistence.*;
-import java.util.Scanner;
-import java.util.ArrayList;
 
 @Entity
-@Table(name = "to_do_list", schema = "todo")
-@NamedQuery(name="ToDoListEntity.viewList", query="SELECT e FROM ToDoListEntity e")
+@Table(name = "to_do_list", schema = "todo", catalog = "")
 public class ToDoListEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -33,8 +29,6 @@ public class ToDoListEntity {
         this.task = task;
     }
 
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -53,13 +47,5 @@ public class ToDoListEntity {
         int result = id;
         result = 31 * result + (task != null ? task.hashCode() : 0);
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "ToDoListEntity{" +
-                "id=" + id +
-                ", task='" + task + '\'' +
-                '}';
     }
 }

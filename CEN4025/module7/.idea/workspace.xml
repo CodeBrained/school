@@ -1,45 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b760b74c-d943-4366-a646-e8a900cdce33" name="Changes" comment="" />
+    <list default="true" id="ffb02250-54b9-4bd1-9301-0c517633d581" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../module5/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module5/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module5/src/main/java/com/example/ToDoList/entity/ToDoServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/src/main/java/com/example/ToDoList/entity/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/src/main/java/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/src/main/java/com/example/ToDoList/entity/Methods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/src/main/java/entity/ToDoListEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/src/main/java/com/example/ToDoList/entity/ToDoListEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/web/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/web/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/maven_wrapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module7.iml" beforeDir="false" afterPath="$PROJECT_DIR$/module7.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Methods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ToDoListEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ToDoListEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Methods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/entity/ToDoListEntity.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
-  <component name="ProjectId" id="2XhOBxoZejT5sHqVAmB0N8O7u4C" />
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2XjzkspiAfXKeZdOeIJ51udUNpP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JPA.DatabaseSchemaImportDialog": "1784184e-43f3-4326-88a6-477e441ec784",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_directory_selection": "C:/Users/Cristian/Documents/CodingRepos/school/CEN4025/module7/src/main/java",
+    "last_opened_file_path": "C:/Users/Cristian/Documents/CodingRepos/school/CEN4025/module7",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "MavenSettings",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="entity" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b760b74c-d943-4366-a646-e8a900cdce33" name="Changes" comment="" />
-      <created>1699077714726</created>
+      <changelist id="ffb02250-54b9-4bd1-9301-0c517633d581" name="Changes" comment="" />
+      <created>1699157424823</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1699077714726</updated>
-      <workItem from="1699077715753" duration="62000" />
+      <updated>1699157424823</updated>
+      <workItem from="1699157425831" duration="1203000" />
+      <workItem from="1699158694587" duration="5238000" />
+      <workItem from="1699164159325" duration="413000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
