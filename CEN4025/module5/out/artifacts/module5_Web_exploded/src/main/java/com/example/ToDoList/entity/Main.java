@@ -1,4 +1,6 @@
-import entity.ToDoListEntity;
+package com.example.ToDoList.entity;
+
+import com.example.ToDoList.entity.ToDoListEntity;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -96,5 +98,4 @@ public class Main {
             entityManagerFactory.close();
         }
     }
-
 }

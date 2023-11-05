@@ -2,28 +2,56 @@ package com.example.module7;
 
 import java.io.*;
 
+import entity.ToDoListEntity;
+import jakarta.persistence.*;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "toDoServlet", value = "/toDo-servlet")
+@WebServlet("/toDo-servlet")
 public class ToDoServlet extends HttpServlet {
-    private String message;
 
-    /*public void init() {
-        message = "Hello World!";
+    EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("default");
+    EntityManager entityManager = entityManagerFactory.createEntityManager();
+    //EntityTransaction transaction = entityManager.getTransaction();
+
+    TypedQuery<ToDoListEntity> viewToDo = entityManager.createNamedQuery("ToDoListEntity.viewList", ToDoListEntity.class);
+
+    public void init() {
     }
 
-     */
-    
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String action = request.getServletPath();
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        response.setContentType("text/html");
+        EntityTransaction transaction = entityManager.getTransaction();
 
-        // Hello
-        PrintWriter out = response.getWriter();
-        out.println("<html><body>");
-        out.println("<h1>" + message + "</h1>");
-        out.println("</body></html>");
+        switch(action) {
+            case "/addTask":
+                transaction.begin();
+                String toDoItem = request.getParameter("toDoAdd");
+                System.out.println(toDoItem);
+
+                // Adds to-do item to the DB
+                ToDoListEntity toDoAdd = new ToDoListEntity();
+                toDoAdd.setTask(toDoItem);
+                entityManager.persist(toDoAdd);
+
+                transaction.commit();
+                break;
+            case "/deleteTask":
+                transaction.begin();
+                ToDoListEntity toDoDelete = new ToDoListEntity();
+
+                transaction.commit();
+                break;
+            default:
+                break;
+        }
+    }
+
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //response.setContentType("text/html");
+
     }
 
     public void destroy() {

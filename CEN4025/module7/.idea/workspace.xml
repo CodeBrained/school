@@ -10,9 +10,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffb02250-54b9-4bd1-9301-0c517633d581" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/WEB-INF/classes/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/WEB-INF/classes/Methods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/WEB-INF/classes/entity/ToDoListEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/src/main/java/Methods.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/src/main/java/entity/ToDoListEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../module5/src/main/java/com/example/ToDoList/entity/ToDoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/src/main/java/com/example/ToDoList/entity/ToDoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/module7/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/module7/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/module7/ToDoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/module7/ToDoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +83,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode",
+    "settings.editor.selected.configurable": "preferences.general",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -207,7 +216,8 @@
       <updated>1699157424823</updated>
       <workItem from="1699157425831" duration="1203000" />
       <workItem from="1699158694587" duration="5238000" />
-      <workItem from="1699164159325" duration="8531000" />
+      <workItem from="1699164159325" duration="15647000" />
+      <workItem from="1699200574843" duration="8799000" />
     </task>
     <servers />
   </component>
