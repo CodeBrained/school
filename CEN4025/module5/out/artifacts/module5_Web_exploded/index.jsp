@@ -7,7 +7,6 @@
     <body>
     <h1> To-Do List</h1>
         <form name="myForm" action="results.jsp" method="post">
-
             <table>
                 <tbody>
 
@@ -26,7 +25,6 @@
 
             <input type="reset" value="Clear" name="clear" />
             <input type="submit" value="Submit" name="submit" />
-
         </form>
 
     </body>

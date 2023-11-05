@@ -1,4 +1,4 @@
-package com.example.ToDoList.entity;
+package com.example.module7;
 
 public class Methods {
     public static void intro(){

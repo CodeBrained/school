@@ -1,6 +1,6 @@
-package com.example.ToDoList.entity;
+package com.example.module7;
 
-import com.example.ToDoList.entity.ToDoListEntity;
+import entity.ToDoListEntity;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
@@ -19,7 +19,6 @@ public class Main {
             Scanner scan = new Scanner(System.in);
             ArrayList<String> items = new ArrayList<String>();
 
-            //ToDoListEntity toDo = new ToDoListEntity();
             TypedQuery<ToDoListEntity> viewToDo = entityManager.createNamedQuery("ToDoListEntity.viewList", ToDoListEntity.class);
 
             int userChoice = 0;
@@ -98,4 +97,5 @@ public class Main {
             entityManagerFactory.close();
         }
     }
+
 }

@@ -3,28 +3,29 @@ package entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "to_do_list", schema = "todo", catalog = "")
+@Table(name = "to_do_list", schema = "todo")
+@NamedQuery(name="ToDoListEntity.viewList", query="SELECT e FROM ToDoListEntity e")
 public class ToDoListEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
     @Column(name = "ID")
     private int id;
-    @Basic
-    @Column(name = "task")
-    private String task;
 
     public int getId() {
         return id;
     }
-
-    public void setId(int id) {
+    /* public void setId(int id) {
         this.id = id;
     }
+     */
+
+    @Basic
+    @Column(name = "task")
+    private String task;
 
     public String getTask() {
         return task;
     }
-
     public void setTask(String task) {
         this.task = task;
     }

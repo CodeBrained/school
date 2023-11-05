@@ -1,9 +1,6 @@
-package entity;
+package com.example.ToDoList.entity;
 
-import com.mysql.cj.Session;
 import jakarta.persistence.*;
-import java.util.Scanner;
-import java.util.ArrayList;
 
 @Entity
 @Table(name = "to_do_list", schema = "todo")

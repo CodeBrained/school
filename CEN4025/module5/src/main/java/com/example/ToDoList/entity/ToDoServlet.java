@@ -1,2 +1,8 @@
-package com.example.ToDoList.entity;public class ToDoServlet {
+package com.example.ToDoList.entity;
+
+
+
+
+public class ToDoServlet {
+
 }
