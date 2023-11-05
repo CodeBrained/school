@@ -11,6 +11,7 @@ public class Main {
         EntityTransaction transaction = entityManager.getTransaction();
 
         try {
+            //transaction.begin();
 
             Methods.intro();
             Methods.continueMessage();
@@ -19,6 +20,7 @@ public class Main {
 
             //ToDoListEntity toDo = new ToDoListEntity();
             TypedQuery<ToDoListEntity> viewToDo = entityManager.createNamedQuery("ToDoListEntity.viewList", ToDoListEntity.class);
+
 
             int userChoice = 0;
             while (userChoice != -1) {
@@ -42,7 +44,7 @@ public class Main {
 
                         transaction.commit();
                         break;
-                    case 2:
+                    case 2: //FIXME
                         transaction.begin();
                         ToDoListEntity toDo2 = new ToDoListEntity();
 
@@ -98,3 +100,4 @@ public class Main {
     }
 
 }
+
