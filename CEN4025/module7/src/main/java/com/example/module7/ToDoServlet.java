@@ -1,16 +1,20 @@
 package com.example.module7;
 
 import java.io.*;
+
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 
-@WebServlet(name = "helloServlet", value = "/hello-servlet")
-public class HelloServlet extends HttpServlet {
+@WebServlet(name = "toDoServlet", value = "/toDo-servlet")
+public class ToDoServlet extends HttpServlet {
     private String message;
 
-    public void init() {
+    /*public void init() {
         message = "Hello World!";
     }
+
+     */
+    
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
