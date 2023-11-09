@@ -10,18 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffb02250-54b9-4bd1-9301-0c517633d581" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/WEB-INF/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/WEB-INF/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/WEB-INF/classes/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/WEB-INF/classes/Methods.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/WEB-INF/classes/entity/ToDoListEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/src/main/java/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/src/main/java/Methods.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/src/main/java/entity/ToDoListEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/out/artifacts/module5_Web_exploded/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module5/src/main/java/com/example/ToDoList/entity/ToDoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module5/src/main/java/com/example/ToDoList/entity/ToDoServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/module7/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/module7/ToDoServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/module7/ToDoServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/ToDoListEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/ToDoListEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,6 +39,9 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -67,27 +61,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JPA.DatabaseSchemaImportDialog": "1784184e-43f3-4326-88a6-477e441ec784",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_directory_selection": "C:/Users/Cristian/Documents/CodingRepos/school/CEN4025/module7/src/main/java",
-    "last_opened_file_path": "C:/Users/Cristian/Documents/CodingRepos/school/CEN4025/module7",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.general",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JPA.DatabaseSchemaImportDialog&quot;: &quot;1784184e-43f3-4326-88a6-477e441ec784&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Cristian/Documents/CodingRepos/school/CEN4025/module7/src/main/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Cristian/Documents/CodingRepos/school/CEN4025/module7&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.Confirmation&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Cristian\Documents\CodingRepos\school\CEN4025\module7" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="entity" />
     </key>
@@ -129,6 +127,9 @@
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="60215" />
       </RunnerSettings>
+      <RunnerSettings RunnerId="Debug with VisualVM">
+        <option name="DEBUG_PORT" value="57733" />
+      </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
@@ -145,6 +146,21 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug with VisualVM">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -189,6 +205,21 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run with VisualVM">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
       <method v="2">
         <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
@@ -218,6 +249,14 @@
       <workItem from="1699158694587" duration="5238000" />
       <workItem from="1699164159325" duration="15647000" />
       <workItem from="1699200574843" duration="8799000" />
+      <workItem from="1699226137532" duration="6008000" />
+      <workItem from="1699241761141" duration="127000" />
+      <workItem from="1699244058710" duration="506000" />
+      <workItem from="1699382400317" duration="1428000" />
+      <workItem from="1699555948692" duration="91000" />
+      <workItem from="1699556070224" duration="1297000" />
+      <workItem from="1699566427158" duration="2225000" />
+      <workItem from="1699569371615" duration="1094000" />
     </task>
     <servers />
   </component>

@@ -14,10 +14,10 @@ public class ToDoListEntity {
     public int getId() {
         return id;
     }
-    /* public void setId(int id) {
+    public void setId(int id) {
         this.id = id;
     }
-     */
+
 
     @Basic
     @Column(name = "task")

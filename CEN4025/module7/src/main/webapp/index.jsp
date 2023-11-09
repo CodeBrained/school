@@ -14,5 +14,12 @@
     <input type="submit" value="Submit" name="submit" />
 </form>
 
+<!-- Delete to-do item -->
+<form name="deleteForm" action="${pageContext.request.contextPath}/toDo-servlet" method="post">
+    <label for ="toDoAdd"> Enter ID of item to delete: </label>
+    <input type="text" id="toDoDelete" name = "toDoDelete" size="50">
+    <input type="submit" value="Submit" name="submit" />
+</form>
+
 </body>
 </html>

@@ -1,7 +1,6 @@
 package com.example.module7;
 
 import java.io.*;
-
 import entity.ToDoListEntity;
 import jakarta.persistence.*;
 import jakarta.servlet.ServletException;
@@ -15,9 +14,9 @@ public class ToDoServlet extends HttpServlet {
     EntityManager entityManager = entityManagerFactory.createEntityManager();
     //EntityTransaction transaction = entityManager.getTransaction();
 
-    TypedQuery<ToDoListEntity> viewToDo = entityManager.createNamedQuery("ToDoListEntity.viewList", ToDoListEntity.class);
+    //TypedQuery<ToDoListEntity> viewToDo = entityManager.createNamedQuery("ToDoListEntity.viewList", ToDoListEntity.class);
 
-    public void init() {
+    public void init() throws ServletException {
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -35,6 +34,7 @@ public class ToDoServlet extends HttpServlet {
                 ToDoListEntity toDoAdd = new ToDoListEntity();
                 toDoAdd.setTask(toDoItem);
                 entityManager.persist(toDoAdd);
+                entityManager.flush();
 
                 transaction.commit();
                 break;
